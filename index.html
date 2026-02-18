@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projet Génération lance-eau - IqbAladin</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 /* Style de base */
 * { box-sizing: border-box; }
@@ -13,6 +13,7 @@ margin: 0;
 font-family: 'Poppins', sans-serif;
 background: #fff;
 color: #333;
+line-height: 1.6;
 }
 header {
 background: #5e73ff;
@@ -36,9 +37,10 @@ border-bottom: 1px solid #eee;
 }
 h3 {
 color: #ff725e;
-font-size: 1.5em;
+font-size: 1.8em;
 border-left: 5px solid #ff725e;
 padding-left: 15px;
+margin-bottom: 30px;
 }
 .odd {
 background-color: #1a5e20;
@@ -61,34 +63,75 @@ box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 margin-top: 10px;
 background: #f9f9f9;
 }
-.photo-container {
-text-align: center;
-margin-bottom: 20px;
+
+/* --- TABLEAU BUDGET --- */
+.budget-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+background: white;
+color: #333;
+border-radius: 8px;
+overflow: hidden;
+}
+.budget-table th, .budget-table td {
+padding: 12px;
+border: 1px solid #ddd;
+text-align: left;
+}
+.budget-table th {
+background-color: #f2f2f2;
+font-weight: 600;
 }
 
-/* --- MODIFICATION POUR LES PHOTOS EN LIGNE --- */
-.grid-photos {
-display: flex;
-justify-content: space-between;
-gap: 15px;
-margin-top: 20px;
+/* --- STYLE VISUEL DU PITCH --- */
+.pitch-container {
+background-color: #f9f9f9;
+padding: 30px;
+border-radius: 20px;
+border: 1px solid #ddd;
+margin-top: 40px;
 }
-.grid-item {
-flex: 1;
-text-align: center;
+.speech-box {
+margin-bottom: 15px;
+padding: 15px 20px;
+border-radius: 15px;
+background: white;
+box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+border-left: 6px solid #5e73ff;
 }
-.grid-item img {
-width: 100%;
-height: 200px; /* Hauteur fixe pour l'alignement */
-object-fit: cover; /* Coupe proprement l'image pour remplir le cadre */
-border-radius: 10px;
-}
-.grid-item h5 {
-margin: 10px 0 5px 0;
+.speech-box:nth-child(even) { border-left-color: #ff725e; }
+.speech-box:nth-child(3n) { border-left-color: #1a5e20; }
+
+.speaker-name {
 font-weight: 600;
-color: #555;
+color: #5e73ff;
+display: block;
+margin-bottom: 5px;
+text-transform: uppercase;
+font-size: 0.85em;
+letter-spacing: 1px;
 }
-/* ------------------------------------------- */
+.speech-box:nth-child(even) .speaker-name { color: #ff725e; }
+.speech-box:nth-child(3n) .speaker-name { color: #1a5e20; }
+
+.pitch-text-content {
+margin: 0;
+font-size: 1.05em;
+color: #444;
+}
+.pitch-final-slogan {
+text-align: center;
+font-size: 2em;
+font-weight: 600;
+color: #1a5e20;
+margin-top: 30px;
+padding: 20px;
+border: 4px solid #1a5e20;
+border-radius: 15px;
+background: #f1f8f1;
+text-transform: uppercase;
+}
 
 .placeholder-img {
 width: 100%;
@@ -101,8 +144,6 @@ border: 2px dashed #ccc;
 color: #999;
 border-radius: 10px;
 margin-top: 10px;
-text-align: center;
-padding: 10px;
 }
 footer {
 background: #333;
@@ -124,7 +165,7 @@ margin-top: 50px;
 <h3>Étape 0 – Se préparer : Élaborer une charte de groupe</h3>
 <p>🎯 <strong>Objectif :</strong> Construire notre boîte à outils et définir nos règles.</p>
 
-<div class="photo-container">
+<div class="photo-container" style="text-align: center;">
 <h4>Notre Boîte à Outils & L'Équipe</h4>
 <img src="photo1.jpeg" alt="Photo du groupe et de la boîte à outils">
 </div>
@@ -151,16 +192,16 @@ margin-top: 50px;
 
 <section>
 <h3>Étape 1 - Se Questionner : Présentation de la problématique</h3>
-<div class="business"> 
+<div class="business">
 <h4>🚀 Le Défi TSC</h4>
 <p><strong>Comment rendre vivable et soutenable la vie des riverain.ne.s dans l'espace public en 2035 ?</strong></p>
 <img src="photo3.jpg" alt="Illustration de la problématique">
 </div>
 
-<div class="photo-container" style="margin-top: 30px;">
+<div style="text-align: center; margin-top: 30px;">
 <h4>😈 Notre Anti-Projet : "Génération Lance-Flamme"</h4>
 <img src="photo2.jpg" alt="Maquette Anti-Projet 1">
-<p><em>"Notre Anti-Projet consiste en une borne libre-service de lance-flammes qui émet des gaz à effet de serre, brûle la biodiversité et encourage la destruction de l'environnement."</em></p>
+<p><em>"Notre Anti-Projet consiste en une borne libre-service de lance-flammes qui émet des gasses à effet de serre, brûle la biodiversité et encourage la destruction de l'environnement."</em></p>
 </div>
 
 <div id="idees_initiales" style="margin-top: 20px;">
@@ -178,62 +219,45 @@ margin-top: 50px;
 <div class="odd">
 <h4>💡 Notre Projet : La Borne Végétale</h4>
 <p><strong>QUI (Bénéficiaires) :</strong> Les habitants du quartier et la biodiversité urbaine.</p>
-<p><strong>QUOI (Fonction) :</strong> Permettre, faciliter et encourager la plantation de végétaux par les habitants des villes grâce à la mise à disposition de Lanceurs de graines. :</strong> 
-    <ul>
-    <li><strong>Deux lanceurs de graines</strong> en libre-service pour une végétalisation simplifiée.</li>
-    <li>Un <strong>outil perforateur</strong> intégré aux lanceurs pour préparer le sol avant la plantation.</li>
-    <li>Un <strong>réservoir de graines</strong> centralisé pour recharger rapidement les appareils.</li>
-    <li>Un <strong>récupérateur d'eau de pluie</strong> permettant d'alimenter les lanceurs pour l'arrosage.</li>
-    <li>Un <strong>bac de compost</strong> communautaire fournissant l'engrais nécessaire aux plantations.</li>
-    <li>Un <strong>écran et panneau solaire</strong> affichant le top 5 des meilleur.es végétaliseur.euses du mois.</li>
+<p><strong>QUOI (Fonction) :</strong> Permettre, faciliter et encourager la plantation de végétaux par les habitants des villes grâce à la mise à disposition de Lanceurs de graines.</p>
+<ul>
+    <li><strong>Deux lanceurs de graines</strong> en libre-service.</li>
+    <li>Un <strong>outil perforateur</strong> intégré.</li>
+    <li>Un <strong>réservoir de graines</strong> centralisé.</li>
+    <li>Un <strong>récupérateur d'eau de pluie</strong>.</li>
+    <li>Un <strong>bac de compost</strong> communautaire.</li>
+    <li>Un <strong>écran et panneau solaire</strong>.</li>
 </ul>
-</p>
 </div>
 
-<div style="display: flex; justify-content: space-around; margin-top: 20px; flex-wrap: wrap; align-items: flex-end;">
+<div style="display: flex; justify-content: space-around; margin-top: 20px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 300px; padding: 10px; text-align: center;">
-        <h4 style="min-height: 50px; display: flex; align-items: center; justify-content: center;">Maquette de structure (Vue de Face)</h4>
-        <img src="face.jpg" alt="Vue de face de La Borne Végétale" style="width: 100%; height: auto;">
+        <h4>Maquette (Vue de Face)</h4>
+        <img src="face.jpg" alt="Vue de face" style="width: 100%;">
     </div>
     <div style="flex: 1; min-width: 300px; padding: 10px; text-align: center;">
-        <h4 style="min-height: 50px; display: flex; align-items: center; justify-content: center;">Maquette de structure (Vue de Dos)</h4>
-        <img src="dos.jpg" alt="Vue arrière de la borne" style="width: 100%; height: auto;">
-    </div>
-    <div style="flex: 1; min-width: 300px; padding: 10px; text-align: center;">
-        <h4 style="min-height: 50px; display: flex; align-items: center; justify-content: center;">Zoom sur les détails techniques</h4>
-        <img src="interieur.jpg" alt="Détails du système interne" style="width: 100%; height: auto;">
+        <h4>Maquette (Vue de Dos)</h4>
+        <img src="dos.jpg" alt="Vue arrière" style="width: 100%;">
     </div>
 </div>
 </section>
-    
+
 <section>
 <h3>Étape 3 - Prototyper la solution (Le Chantier)</h3>
-<div class="photo-container">
+<div style="text-align: center;">
     <h4>🏗️ Réalisation du Prototype</h4>
-    
-    <div style="display: flex; justify-content: space-around; gap: 15px; margin-top: 20px; flex-wrap: wrap; align-items: flex-end;">
-        <div style="flex: 1; min-width: 300px; text-align: center;">
-            <h5 style="min-height: 40px; display: flex; align-items: center; justify-content: center;">Vue de face</h5>
-            <img src="prototype-face.jpg" alt="Vue de face" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        </div>
-        <div style="flex: 1; min-width: 300px; text-align: center;">
-            <h5 style="min-height: 40px; display: flex; align-items: center; justify-content: center;">Vue de côté</h5>
-            <img src="prototype-cote.jpg" alt="Vue de côté" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        </div>
-    </div>
-
-    <div style="margin-top: 20px; text-align: center;">
-        <h5 style="min-height: 40px; display: flex; align-items: center; justify-content: center;">Vue de face / Zoom</h5>
-        <img src="prototype-zoom.jpg" alt="Vue de face zoom" style="width: 100%; max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <div style="display: flex; justify-content: space-around; gap: 15px; flex-wrap: wrap;">
+        <img src="prototype-face.jpg" alt="Prototype Face" style="width: 45%; min-width: 300px;">
+        <img src="prototype-cote.jpg" alt="Prototype Côté" style="width: 45%; min-width: 300px;">
     </div>
 </div>
 </section>
-    
+
 <section>
 <h3>Étape 4 - Planifier & Présenter</h3>
 
 <div class="business">
-<h4>💼 Budget Prévisionnel (Borne Mixte Bois/Métal)</h4>
+<h4>💼 Budget Prévisionnel</h4>
 <table class="budget-table">
     <thead>
         <tr>
@@ -244,56 +268,75 @@ margin-top: 50px;
     </thead>
     <tbody>
         <tr><td>Structure Borne</td><td>Ossature Métal & Habillage Bois</td><td>730,00 €</td></tr>
-        <tr><td>Système de Tir (x2)</td><td>Moteurs, vis sans fin, pompes & boutons</td><td>135,00 €</td></tr>
-        <tr><td>Réservoirs</td><td>Polycarbonate (Eau, Graines, Engrais)</td><td>80,00 €</td></tr>
-        <tr><td>Énergie & Contrôle</td><td>Panneau solaire, batterie & Arduino</td><td>370,00 €</td></tr>
+        <tr><td>Système de Tir (x2)</td><td>Moteurs, pompes & boutons</td><td>135,00 €</td></tr>
+        <tr><td>Réservoirs</td><td>Polycarbonate</td><td>80,00 €</td></tr>
+        <tr><td>Énergie & Contrôle</td><td>Solaire, batterie & Arduino</td><td>370,00 €</td></tr>
         <tr><td>Sécurité & Légal</td><td>Certification & Assurance</td><td>500,00 €</td></tr>
-        <tr><td>Finition & Logistique</td><td>Vernis, Peinture, Fixations & Machines</td><td>283,00 €</td></tr>
-        <tr><td><strong>TOTAL UNITAIRE</strong></td><td><strong>Coût de fabrication par borne</strong></td><td><strong>2 098,00 €</strong></td></tr>
+        <tr><td>Finition & Logistique</td><td>Vernis, Peinture, Fixations</td><td>283,00 €</td></tr>
+        <tr><td><strong>TOTAL UNITAIRE</strong></td><td><strong>Coût par borne</strong></td><td><strong>2 098,00 €</strong></td></tr>
     </tbody>
 </table>
 </div>
 
 <div class="pitch-container">
-<h4 style="color: #ff725e;">🎤 Le Pitch des IqbAladin : La LBV (La Borne Végétale)</h4>
-<div class="pitch-text">
-Bonjour, On est les IqbAladin, dans l’équipe, il y a Wissen, Clément, Dado, Marcus, Natty, Nina, Chaïma, Nassim et Wissen.
+    <h4 style="color: #ff725e; text-align: center; font-size: 1.8em; margin-bottom: 25px;">🎤 SCRIPT COMPLET DU PITCH</h4>
+    
+    <div class="speech-box">
+        <span class="speaker-name">Chaïma :</span>
+        <p class="pitch-text-content">Bonjour, On est les <strong>IqbAladin</strong>, dans l’équipe, il y a Wissen, Clément, Dado, Marcus, Natty, Nina, Chaïma, Nassim et Wissen.</p>
+    </div>
 
-Vous saviez qu’en Seine-Saint-Denis, seulement 16 % des espaces sont végétalisés, alors qu’en France on est en moyenne autour de 19 %. Néanmoins, ce n’est pas suffisant ! D’après le Pr. Cecil Konijnendijk, il faudrait 30 % d’espaces végétalisés pour que la ville soit soutenable face au réchauffement climatique.
+    <div class="speech-box">
+        <span class="speaker-name">Clément :</span>
+        <p class="pitch-text-content">Vous saviez qu’en Seine-Saint-Denis, seulement <strong>16 % des espaces sont végétalisés</strong>, alors qu’en France on est en moyenne autour de 19 %. Néanmoins, ce n’est pas suffisant ! D’après le Pr. Cecil Konijnendijk, il faudrait <strong>30 % d’espaces végétalisés</strong> pour que la ville soit soutenable pour faire face au réchauffement climatique.</p>
+    </div>
 
-On a inventé une solution unique, innovante, ludique, efficace et coopérative : <strong>La LBV, la borne végétale.</strong>
+    <div class="speech-box">
+        <span class="speaker-name">Natty :</span>
+        <p class="pitch-text-content">On a inventé une solution unique, innovante, ludique, efficace et coopérative : <strong>La LBV, la borne végétale.</strong></p>
+    </div>
 
-Avec la LBV, fini les espaces non végétalisés, nous offrons une borne en libre-service contenant des lance-graines alimentés en énergie par des panneaux solaires et en eau de pluie. La LBV est équipée d'un double système de lancement manuel alimenté par des cartouches de graines de saison, d'eau et d'engrais, pour garantir une pousse efficace et une ville plus respirante. La borne est alimentée par un système de panneaux solaires qui servent à charger les lanceurs, par un compost produisant des engrais, et par un réservoir.
+    <div class="speech-box">
+        <span class="speaker-name">Wissem :</span>
+        <p class="pitch-text-content">Avec la LBV, fini les espaces non végétalisés, nous offrons une borne en libre service contenant des lance-graine alimentés en énergie par des panneaux solaires et en eau de pluie.</p>
+    </div>
 
-Cet équipement vise principalement les jeunes, car une jeunesse éduquée est une jeunesse éclairée. En effet, 3 jeunes sur 4 ne savent pas concrètement participer à l’amélioration de la planète ; avec la LBV, nous leur donnons l’occasion de végétaliser la ville. Ce sera le premier jeu écologique urbain, avec son système de classement et de récompenses, avec un impact réel sur la ville et qui va permettre aux jeunes de lâcher leur téléphone pour aider la ville.
+    <div class="speech-box">
+        <span class="speaker-name">Nina :</span>
+        <p class="pitch-text-content">La LBV est équipée d'un double système de lancement manuel alimenté par des cartouches de graines de saison, d'eau et d'engrais, pour garantir une pousse efficace et une ville plus respirante.</p>
+    </div>
 
-<div class="odd-box">
-<strong>Zoom sur nos impacts (ODD) :</strong> Notre projet est une solution complète qui répond à 12 Objectifs de Développement Durable. Il améliore la santé et le climat (ODD 3, 13, 15), utilise l'énergie solaire et le recyclage (ODD 7, 12), tout en étant un outil pédagogique (ODD 4). Il favorise aussi l'emploi local et les partenariats solidaires (ODD 8, 17).
-</div>
+    <div class="speech-box">
+        <span class="speaker-name">Dado :</span>
+        <p class="pitch-text-content">La borne est alimentée par un système de panneau solaire qui sert à charger les lanceurs, par un compost produisant des engrais, et par un réservoir. Cet équipement vise principalement les jeunes, car une jeunesse éduquée est une jeunesse éclairée. En effet, 3 jeunes sur 4 ne savent pas concrètement participer à l’amélioration de la planète, avec la LBV, nous leur donnons l’occasion de végétaliser la ville. Ce sera le premier jeu écologique urbain, avec son système de classement et de récompenses, avec un impact réel sur la ville et qui va permettre aux jeunes de lâcher leur téléphone pour aider la ville.</p>
+    </div>
 
-Notre solution est la meilleure pour rendre nos villes plus vertes car elle est peu chère, facile à mettre en place, elle peut être construite rapidement et transforme la ville polluée en ville verte. Nous serons en collaboration avec Truffaut pour nous aider à fournir les matériaux et les graines. Cela améliorera leur image et nous permettra de limiter les coûts.
+    <div class="speech-box">
+        <span class="speaker-name">Nassim :</span>
+        <p class="pitch-text-content">Notre solution est la meilleure pour rendre nos ville plus verte car elle est peu chère, facile à mettre en place, elle peut être construite rapidement et transforme la ville polluée en ville verte.</p>
+    </div>
 
-Nous vous demandons 10 K€ pour financer nos 3 premières LBV à un coût unitaire de 2 000 €, et le reste nous permettra de financer notre recherche de financement.
+    <div class="speech-box">
+        <span class="speaker-name">Marcus :</span>
+        <p class="pitch-text-content">Notre projet est une solution complète qui répond à <strong>12 Objectifs de Développement Durable</strong>. Il améliore la santé et le climat (ODD 3, 13, 15), utilise l'énergie solaire et le recyclage (ODD 7, 12), tout en étant un outil pédagogique (ODD 4). Il favorise aussi l'emploi local et les partenariats solidaires (ODD 8, 17). Nous serons notamment en collaboration avec <strong>Truffaut</strong> pour nous aider à fournir les matériaux et les graines pour la LBV. Cela améliorera son image et nous permettra de limiter les coûts. Nous vous demandons <strong>10 K€</strong> pour financer nos 3 premières LBV à un coût unitaire de 2000 € et le reste nous permettra de financer notre recherche de financement.</p>
+    </div>
 
-<strong>Avec la LBV, votre avenir est assuré !</strong>
-</div>
+    <div class="pitch-final-slogan">
+        👥 TOUT LE MONDE : "Avec LBV, votre avenir est assuré !"
+    </div>
 </div>
 </section>
 
 <section>
 <h3>Étape 5 - Convaincre : Éloquence & Product Box</h3>
-<div class="photo-container">
-<h4>🎤 Atelier Éloquence</h4>
-<p>Travail sur la voix et la posture</p>
-<div class="placeholder-img">[Photo Atelier Éloquence]</div>
+<div style="text-align: center;">
+    <h4>🎤 Atelier Éloquence</h4>
+    <div class="placeholder-img">[Photo Atelier Éloquence]</div>
 </div>
 <div class="odd" style="text-align: center;">
-<h4>📦 Notre Product Box</h4>
-<h5 style="font-size: 1.2em; margin: 10px 0;">"[Slogan fourni]"</h5>
-<p><strong>Les 3 bénéfices clés :</strong> [Réponse Bénéfices]</p>
-<div class="placeholder-img">[Photo Product Box]</div>
+    <h4>📦 Notre Product Box</h4>
+    <p>🚀 <strong>Nous sommes prêts pour la FINALE !</strong> 🚀</p>
 </div>
-<p style="margin-top: 30px; font-size: 1.2em; text-align: center;">🚀 <strong>Nous sommes prêts pour la FINALE !</strong> 🚀</p>
 </section>
 
 <footer>
