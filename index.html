@@ -120,6 +120,12 @@ margin: 0;
 font-size: 1.05em;
 color: #444;
 }
+.pitch-pause {
+font-style: italic;
+color: #999;
+font-size: 0.9em;
+margin: 8px 0 0 0;
+}
 .pitch-final-slogan {
 text-align: center;
 font-size: 2em;
@@ -166,7 +172,7 @@ margin-top: 50px;
 <p>🎯 <strong>Objectif :</strong> Construire notre boîte à outils et définir nos règles.</p>
 
 <div class="photo-container" style="text-align: center;">
-<h4>Notre Boîte à Outils & L'Équipe</h4>
+<h4>Notre Boîte à Outils &amp; L'Équipe</h4>
 <img src="photo1.jpeg" alt="Photo du groupe et de la boîte à outils">
 </div>
 
@@ -246,15 +252,35 @@ margin-top: 50px;
 <h3>Étape 3 - Prototyper la solution (Le Chantier)</h3>
 <div style="text-align: center;">
     <h4>🏗️ Réalisation du Prototype</h4>
-    <div style="display: flex; justify-content: space-around; gap: 15px; flex-wrap: wrap;">
-        <img src="prototype-face.jpg" alt="Prototype Face" style="width: 45%; min-width: 300px;">
-        <img src="prototype-cote.jpg" alt="Prototype Côté" style="width: 45%; min-width: 300px;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+        <div style="text-align: center; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; height: 60px; display: flex; align-items: center; justify-content: center;">[Titre photo 1]</h4>
+            <img src="https://lh3.googleusercontent.com/d/1SAxVlFhYAci9J45wdXryLxBT9qxuJ8oZ" alt="Prototype 1" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 0;">
+        </div>
+        <div style="text-align: center; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; height: 60px; display: flex; align-items: center; justify-content: center;">[Titre photo 2]</h4>
+            <img src="https://lh3.googleusercontent.com/d/1LWWFN9cmSAmNmshkQzwvYQJwKovZZo9E" alt="Prototype 2" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 0;">
+        </div>
+        <div style="text-align: center; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; height: 60px; display: flex; align-items: center; justify-content: center;">[Titre photo 3]</h4>
+            <img src="https://lh3.googleusercontent.com/d/1ZjpnY-xmwexYfsrI5SukaMVh6EPbWkca" alt="Prototype 3" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin: 0;">
+        </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
+        <div style="text-align: center; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; height: 60px; display: flex; align-items: center; justify-content: center;">[Titre photo 4]</h4>
+            <img src="https://lh3.googleusercontent.com/d/191wk8QvNiBFGiItUFkbDy70i6ZnLWpqX" alt="Prototype 4" style="width: 100%; height: auto; border-radius: 8px; margin: 0;">
+        </div>
+        <div style="text-align: center; display: flex; flex-direction: column;">
+            <h4 style="margin: 0 0 8px 0; height: 60px; display: flex; align-items: center; justify-content: center;">[Titre photo 5]</h4>
+            <img src="https://lh3.googleusercontent.com/d/1qfQF8kC8w2nguojlltMKzQUFKGr5uakx" alt="Prototype 5" style="width: 100%; height: auto; border-radius: 8px; margin: 0;">
+        </div>
     </div>
 </div>
 </section>
 
 <section>
-<h3>Étape 4 - Planifier & Présenter</h3>
+<h3>Étape 4 - Planifier &amp; Présenter</h3>
 
 <div class="business">
 <h4>💼 Budget Prévisionnel</h4>
@@ -267,12 +293,12 @@ margin-top: 50px;
         </tr>
     </thead>
     <tbody>
-        <tr><td>Structure Borne</td><td>Ossature Métal & Habillage Bois</td><td>730,00 €</td></tr>
-        <tr><td>Système de Tir (x2)</td><td>Moteurs, pompes & boutons</td><td>135,00 €</td></tr>
+        <tr><td>Structure Borne</td><td>Ossature Métal &amp; Habillage Bois</td><td>730,00 €</td></tr>
+        <tr><td>Système de Tir (x2)</td><td>Moteurs, pompes &amp; boutons</td><td>135,00 €</td></tr>
         <tr><td>Réservoirs</td><td>Polycarbonate</td><td>80,00 €</td></tr>
-        <tr><td>Énergie & Contrôle</td><td>Solaire, batterie & Arduino</td><td>370,00 €</td></tr>
-        <tr><td>Sécurité & Légal</td><td>Certification & Assurance</td><td>500,00 €</td></tr>
-        <tr><td>Finition & Logistique</td><td>Vernis, Peinture, Fixations</td><td>283,00 €</td></tr>
+        <tr><td>Énergie &amp; Contrôle</td><td>Solaire, batterie &amp; Arduino</td><td>370,00 €</td></tr>
+        <tr><td>Sécurité &amp; Légal</td><td>Certification &amp; Assurance</td><td>500,00 €</td></tr>
+        <tr><td>Finition &amp; Logistique</td><td>Vernis, Peinture, Fixations</td><td>283,00 €</td></tr>
         <tr><td><strong>TOTAL UNITAIRE</strong></td><td><strong>Coût par borne</strong></td><td><strong>2 098,00 €</strong></td></tr>
     </tbody>
 </table>
@@ -280,15 +306,15 @@ margin-top: 50px;
 
 <div class="pitch-container">
     <h4 style="color: #ff725e; text-align: center; font-size: 1.8em; margin-bottom: 25px;">🎤 SCRIPT COMPLET DU PITCH</h4>
-    
+
     <div class="speech-box">
         <span class="speaker-name">Chaïma :</span>
-        <p class="pitch-text-content">Bonjour, On est les <strong>IqbAladin</strong>, dans l’équipe, il y a Wissen, Clément, Dado, Marcus, Natty, Nina, Chaïma, Nassim et Wissen.</p>
+        <p class="pitch-text-content">Bonjour, on est les <strong>IqbAladdin</strong> ! Notre équipe est composée de Wissem, Clément, Dado, Marcus, Natty, Nina, Chaïma et Nassim.</p>
     </div>
 
     <div class="speech-box">
         <span class="speaker-name">Clément :</span>
-        <p class="pitch-text-content">Vous saviez qu’en Seine-Saint-Denis, seulement <strong>16 % des espaces sont végétalisés</strong>, alors qu’en France on est en moyenne autour de 19 %. Néanmoins, ce n’est pas suffisant ! D’après le Pr. Cecil Konijnendijk, il faudrait <strong>30 % d’espaces végétalisés</strong> pour que la ville soit soutenable pour faire face au réchauffement climatique.</p>
+        <p class="pitch-text-content">Vous saviez qu'en Seine-Saint-Denis, seulement <strong>16 % des espaces sont végétalisés</strong>, alors qu'en France on est en moyenne autour de 19 % ? Néanmoins, ce n'est pas suffisant ! D'après le Pr. Cecil Konijnendijk, il faudrait <strong>30 % d'espaces végétalisés</strong> pour que la ville soit soutenable pour faire face au réchauffement climatique.</p>
     </div>
 
     <div class="speech-box">
@@ -297,8 +323,8 @@ margin-top: 50px;
     </div>
 
     <div class="speech-box">
-        <span class="speaker-name">Wissem :</span>
-        <p class="pitch-text-content">Avec la LBV, fini les espaces non végétalisés, nous offrons une borne en libre service contenant des lance-graine alimentés en énergie par des panneaux solaires et en eau de pluie.</p>
+        <span class="speaker-name">Wissem (Marcus) :</span>
+        <p class="pitch-text-content">Avec la LBV, fini les espaces non végétalisés. Nous offrons une borne en libre service contenant des lance-graine alimentés en énergie par des panneaux solaires et en eau de pluie.</p>
     </div>
 
     <div class="speech-box">
@@ -308,17 +334,24 @@ margin-top: 50px;
 
     <div class="speech-box">
         <span class="speaker-name">Dado :</span>
-        <p class="pitch-text-content">La borne est alimentée par un système de panneau solaire qui sert à charger les lanceurs, par un compost produisant des engrais, et par un réservoir. Cet équipement vise principalement les jeunes, car une jeunesse éduquée est une jeunesse éclairée. En effet, 3 jeunes sur 4 ne savent pas concrètement participer à l’amélioration de la planète, avec la LBV, nous leur donnons l’occasion de végétaliser la ville. Ce sera le premier jeu écologique urbain, avec son système de classement et de récompenses, avec un impact réel sur la ville et qui va permettre aux jeunes de lâcher leur téléphone pour aider la ville.</p>
+        <p class="pitch-text-content">La borne est alimentée par un système de panneau solaire qui sert à charger les lanceurs, par un compost produisant des engrais, et par un récupérateur d'eau.</p>
+        <p class="pitch-pause">— pause —</p>
+        <p class="pitch-text-content">Cet équipement vise principalement les jeunes, car une jeunesse éduquée est une jeunesse éclairée. En effet, 3 jeunes sur 4 ne savent pas comment concrètement participer à l'amélioration de la planète. Avec la LBV, nous leur donnons l'occasion de végétaliser la ville.</p>
+        <p class="pitch-pause">— pause —</p>
+        <p class="pitch-text-content">Ce sera le tout premier jeu écologique urbain, avec son système de classement et de récompenses, avec un impact réel sur la ville et qui va permettre aux jeunes de lâcher leur téléphone pour aider leur quartier.</p>
     </div>
 
     <div class="speech-box">
-        <span class="speaker-name">Nassim :</span>
-        <p class="pitch-text-content">Notre solution est la meilleure pour rendre nos ville plus verte car elle est peu chère, facile à mettre en place, elle peut être construite rapidement et transforme la ville polluée en ville verte.</p>
+        <span class="speaker-name">Nassim (Natty) :</span>
+        <p class="pitch-text-content">Notre solution est la meilleure pour rendre nos villes plus vertes car elle est peu chère, facile à mettre en place, elle peut être construite rapidement et transforme la ville polluée en ville verte.</p>
+        <p class="pitch-pause">— pause —</p>
     </div>
 
     <div class="speech-box">
         <span class="speaker-name">Marcus :</span>
-        <p class="pitch-text-content">Notre projet est une solution complète qui répond à <strong>12 Objectifs de Développement Durable</strong>. Il améliore la santé et le climat (ODD 3, 13, 15), utilise l'énergie solaire et le recyclage (ODD 7, 12), tout en étant un outil pédagogique (ODD 4). Il favorise aussi l'emploi local et les partenariats solidaires (ODD 8, 17). Nous serons notamment en collaboration avec <strong>Truffaut</strong> pour nous aider à fournir les matériaux et les graines pour la LBV. Cela améliorera son image et nous permettra de limiter les coûts. Nous vous demandons <strong>10 K€</strong> pour financer nos 3 premières LBV à un coût unitaire de 2000 € et le reste nous permettra de financer notre recherche de financement.</p>
+        <p class="pitch-text-content">Notre projet est une solution complète qui répond à <strong>12 Objectifs de Développement Durable</strong>. Il améliore la santé et le climat (ODD 3, 13, 15), utilise l'énergie solaire et le recyclage (ODD 7, 12), tout en étant un outil pédagogique (ODD 4). Il favorise aussi l'emploi local et les partenariats solidaires (ODD 8, 17).</p>
+        <p class="pitch-text-content" style="margin-top: 10px;">Nous serons notamment en collaboration avec <strong>Truffaut</strong>, qui nous fournira les matériaux et les graines pour la LBV. Cela améliorera son image et nous permettra de limiter les coûts.</p>
+        <p class="pitch-text-content" style="margin-top: 10px;">Nous vous demandons <strong>10 K€</strong> pour financer nos 3 premières LBV à un coût unitaire de 2000 €. Le reste nous permettra de financer notre recherche de financement.</p>
     </div>
 
     <div class="pitch-final-slogan">
@@ -328,7 +361,7 @@ margin-top: 50px;
 </section>
 
 <section>
-<h3>Étape 5 - Convaincre : Éloquence & Product Box</h3>
+<h3>Étape 5 - Convaincre : Éloquence &amp; Product Box</h3>
 <div style="text-align: center;">
     <h4>🎤 Atelier Éloquence</h4>
     <div class="placeholder-img">[Photo Atelier Éloquence]</div>
